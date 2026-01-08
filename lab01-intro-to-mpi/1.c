@@ -1,6 +1,6 @@
 /*
 MPI program to find pow(x, rank) for all proceses.
-Make even ranked processes print "Hello" and od ones print "World".
+Make even ranked processes print "Hello" and odd ones print "World".
 */
 
 #include"mpi.h"
