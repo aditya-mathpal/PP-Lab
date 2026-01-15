@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     if(rank == 0) {
         fprintf(stdout, "Enter word: ");
         fflush(stdout);
-        scanf("%s", &x);
+        scanf("%s", x);
         MPI_Ssend(&x, 100, MPI_CHAR, 1, 1, MPI_COMM_WORLD);
         fprintf(stdout, "String \"%s\" sent from process 0\n", x);
         fflush(stdout);
