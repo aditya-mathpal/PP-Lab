@@ -45,27 +45,21 @@ int main(int argc, char *argv[]) {
 
 /*
 output:
-$ mpirun -np 8 3.out
-Enter 7 numbers: 1 2 3 4 5 6 7    
+$ mpirun -np 6 3.out
+Enter 5 numbers: 1 2 3 4 5
 1 sent to process 1
 2 sent to process 2
-3 sent to process 3
-4 sent to process 4
-5 sent to process 5
-6 sent to process 6
-1 received by process 1
-Cube of 1 is 1
-7 sent to process 7
 2 received by process 2
 Square of 2 is 4
 3 received by process 3
 Cube of 3 is 27
 4 received by process 4
 Square of 4 is 16
-6 received by process 6
-Square of 6 is 36
 5 received by process 5
 Cube of 5 is 125
-7 received by process 7
-Cube of 7 is 343
+3 sent to process 3
+4 sent to process 4
+5 sent to process 5
+1 received by process 1
+Cube of 1 is 1
 */

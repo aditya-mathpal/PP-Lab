@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
 /*
 output:
-$ mpirun -np 8 4.out
+$ mpirun -np 6 4.out
 Enter number: 55
 55 sent to process 1
 55 received by process 1
@@ -44,13 +44,9 @@ Enter number: 55
 55 sent to process 3
 55 received by process 3
 55 sent to process 4
-55 received by process 0
 55 received by process 4
 55 sent to process 5
 55 received by process 5
-55 sent to process 6
-55 received by process 6
-55 sent to process 7
-55 received by process 7
 55 sent to process 0
+55 received by process 0
 */

@@ -32,20 +32,16 @@ int main(int argc, char *argv[]) {
 
 /*
 output:
-$ mpirun -np 8 2.out
-Enter number: 20
-20 received by process 5
-20 received by process 6
-20 sent to process 1
-20 sent to process 2
-20 sent to process 3
-20 sent to process 4
-20 sent to process 5
-20 sent to process 6
-20 sent to process 7
-20 received by process 1
-20 received by process 2
-20 received by process 3
-20 received by process 4
-20 received by process 7
+$ mpirun -np 6 2.out
+Enter number: 73
+73 sent to process 1
+73 sent to process 2
+73 sent to process 3
+73 sent to process 4
+73 sent to process 5
+73 received by process 1
+73 received by process 2
+73 received by process 3
+73 received by process 4
+73 received by process 5
 */
