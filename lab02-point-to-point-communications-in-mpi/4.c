@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
         fprintf(stdout, "Enter number: ");
         fflush(stdout);
         scanf("%d", &x);
-        fprintf(stdout, "%d sent to process 1\n", x);
+        fprintf(stdout, "%d sent to process 1\n", ++x);
         fflush(stdout);
         MPI_Send(&x, 1, MPI_INT, 1, 1, MPI_COMM_WORLD);
         MPI_Recv(&x, 1, MPI_INT, size-1, 0, MPI_COMM_WORLD, &status);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
         MPI_Recv(&x, 1, MPI_INT, rank-1, rank, MPI_COMM_WORLD, &status);
         fprintf(stdout, "%d received by process %d\n", x, rank);
         fflush(stdout);
-        fprintf(stdout, "%d sent to process %d\n", x, (rank+1)%size);
+        fprintf(stdout, "%d sent to process %d\n", ++x, (rank+1)%size);
         fflush(stdout);
         MPI_Send(&x, 1, MPI_INT, (rank+1)%size, (rank+1)%size, MPI_COMM_WORLD);
     }
@@ -36,17 +36,17 @@ int main(int argc, char *argv[]) {
 /*
 output:
 $ mpirun -np 6 4.out
-Enter number: 55
-55 sent to process 1
-55 received by process 1
-55 sent to process 2
-55 received by process 2
-55 sent to process 3
-55 received by process 3
-55 sent to process 4
-55 received by process 4
-55 sent to process 5
-55 received by process 5
-55 sent to process 0
-55 received by process 0
+Enter number: 24
+25 sent to process 1
+25 received by process 1
+26 sent to process 2
+26 received by process 2
+27 sent to process 3
+27 received by process 3
+28 sent to process 4
+28 received by process 4
+29 sent to process 5
+29 received by process 5
+30 sent to process 0
+30 received by process 0
 */
